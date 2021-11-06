@@ -14,13 +14,13 @@
         <nav>
 
             <div class="logo">
-                <img src="img/logo.jpg" alt="logo">
+                <img src="../img/logo.jpg" alt="logo">
             </div>
 
             <ul class="nav-links">
 
                 <li >
-                    <a class="coloreLinkNavBar" href="index.html" >Home</a>
+                    <a class="coloreLinkNavBar" href="../index.html" >Home</a>
                 </li>
 
                 <li>
@@ -32,11 +32,11 @@
                 </li>
 
                 <li>
-                    <a class="coloreLinkNavBar" href="registrazione.html" style="color: rgb(248, 95, 95);">Registrati</a>
+                    <a class="coloreLinkNavBar" href="registrazione.jsp" style="color: rgb(248, 95, 95);">Registrati</a>
                 </li>
 
                 <li>
-                    <a class="coloreLinkNavBar" href="login.html">Login</a>
+                    <a class="coloreLinkNavBar" href="../login.html">Login</a>
                 </li>
 
             </ul>
@@ -53,15 +53,20 @@
             <form action="registrazione_check.jsp" method="post" class="form_login">
 
                 <h1>Registrati</h1>
-                <input type="text" name="nome" id="nome" placeholder="Inserisci il nome" required>
-                <input type="text" name="cognome" id="cognome" placeholder="Inserisci il cognome" required>
 
-                <!-- <div style="clear: both;"></div> -->
+                <div class="input-container">
 
-                <input type="text" name="codiceFiscale" id="codiceFiscale" required placeholder="Inserisci il codiceFiscale" maxlength="16" minlength="16" >
+                    <input type="text" name="nome" id="nome" placeholder="Inserisci il nome" required>
+                    <input type="text" name="cognome" id="cognome" placeholder="Inserisci il cognome" required>
+          
+                </div>
 
-                <select class="nazionalita" name="naz" id="naz">
-                    <%
+                <div class="input-container">
+
+                    <input type="text" name="codiceFiscale" id="codiceFiscale" required placeholder="Inserisci il codiceFiscale" maxlength="16" minlength="16" >
+
+                    <select class="nazionalita" name="naz" id="naz">
+                        <%
                         String DRIVER = "com.mysql.cj.jdbc.Driver";
                         String URL = "jdbc:mysql://localhost:3306/project_work";
                         String USERNAME = "root";
@@ -82,22 +87,25 @@
                         } catch (SQLException e) {
                             e.getErrorCode();
                         }
-                    %>
-                </select>
+                        %>
+                    </select>
 
-                <!-- <div style="clear: both;"></div> -->
+                </div>
 
-                <input type="email" name="email" id="email" required value="" placeholder="Example@gmail.com">
+                <div class="input-container">
+                    <input type="email" name="email" id="email" required value="" placeholder="Example@gmail.com">
 
-                <input type="password" name="password" id="password" required value="" placeholder="Inserisci la password">
+                    <input type="password" name="password" id="password" required value="" placeholder="Inserisci la password">
 
-                <!-- <div style="clear: both;"></div> -->
+                </div>
 
-                <input type="password" name="confermaPassword" id="confermaPassword" placeholder="Conferma password">
+                <div class="input-container">
 
-                <input type="date" name="dataNascita" id="dataNascita" required>
+                    <input type="password" name="confermaPassword" id="confermaPassword" placeholder="Conferma password">
 
-                <!-- <div style="clear: both;"></div> -->
+                    <input type="date" name="dataNascita" id="dataNascita" required>
+
+                </div>
 
                 <input type="submit" value="Login">
 

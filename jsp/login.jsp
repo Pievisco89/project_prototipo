@@ -1,6 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
-<%@page import="../lib/mysql-connector-java-8.0.24.jar"%>
 <%
     String DRIVER = "com.mysql.cj.jdbc.Driver";
     String URL = "jdbc:mysql://localhost:3306/project_work";
