@@ -10,7 +10,7 @@
     boolean status = false;
     try {
         Class.forName(DRIVER);
-        Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);   
         String sel = ("SELECT email, password FROM amministratore");
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery(sel);
@@ -24,8 +24,8 @@
         e.getErrorCode();
     }
     if (status) {
-        out.println("<h1>Login riuscita!</h1>");
+        out.println("<h1>Login admin riuscita!</h1>");
     } else {
-        out.println("<h1>Login NON riuscita!</h1>");
+        out.println("<h1>Login admin NON riuscita!</h1>");
     }
 %>
