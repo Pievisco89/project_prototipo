@@ -150,7 +150,7 @@
                             <a href="Ordini.jsp"><button>Inserisci curriculum</button></a>
                         </div>
                         <div id="right">
-                            <a href="Ordini.jsp"><button>Visualizza candidature</button></a>
+                            <a href="candidature.jsp"><button>Visualizza candidature</button></a>
                         </div>
                     </div>
                 
