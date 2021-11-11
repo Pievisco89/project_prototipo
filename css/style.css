@@ -57,7 +57,7 @@ nav img{
 
 .banner{
   width: 80%;
-  height: 300px;
+  height: 250px;
   background-color: rgb(100, 56, 223);
   /* background-image: url('../img/prova.jpg');
   background-size: cover;
@@ -136,4 +136,98 @@ footer li{
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+/*button scopri di più*/
+.button_scopri_di_piu{
+  text-align: center;
+  margin-bottom: 5%;
+}
+.button_scopri_di_piu button{
+  background-color: #2276b6;
+  font-weight: 403px;
+  border: none;
+  cursor: pointer;
+  
+}
+.button_scopri_di_piu a{
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight:  12px;
+  color: #fff;
+  padding: 19px 39px;
+  border: solid 1px #0076a3;
+  background: #0095cd;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 17px;
+ 
+  
+}
+
+
+.button_scopri_di_piu a:hover{
+  background-color:	#003399;
+}
+/*fine scopri di piu*/
+
+/*Chi siamo? stile*/
+.about{
+  margin: 15px auto;
+  width: 80%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+
+
+#chiSiamoId{
+  text-align: center;
+  
+}
+.foto1{
+  text-align: center;
+}
+.contenitoreFraseChiSimo{
+  margin-top: 2%;
+  margin-bottom: 4%;
+  text-indent: 30px;
+  text-align: center;
+}
+
+/*button scopri di più*/
+.button_scopri_di_piu{
+  text-align: center;
+  margin-bottom: 5%;
+}
+.button_scopri_di_piu button{
+  background-color: #2276b6;
+  font-weight: 403px;
+  border: none;
+  cursor: pointer;
+  
+}
+.button_scopri_di_piu a{
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight:  12px;
+  color: #fff;
+  padding: 19px 39px;
+  border: solid 1px #0076a3;
+  background: #0095cd;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 17px;
+ 
+  
+}
+
+
+.button_scopri_di_piu a:hover{
+  background-color:	#003399;
 }

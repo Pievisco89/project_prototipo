@@ -11,12 +11,16 @@
     try {
         Class.forName(DRIVER);
         Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);   
-        String sel = ("SELECT email, password FROM amministratore");
+        String sel = ("SELECT nome, cognome, email, password FROM amministratore");
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery(sel);
         while (rs.next()) {
             if (rs.getString("email").equals(user) && rs.getString("password").equals(password)) {
-                status = true;
+            status = true;
+            String nome_cognome = rs.getString("nome") + " " + rs.getString("cognome");
+            session.setAttribute("Email",  rs.getString("email"));
+            session.setAttribute("Password",  rs.getString("password"));
+            session.setAttribute("Welcome", nome_cognome);
             }
         }
         con.close();
@@ -24,8 +28,11 @@
         e.getErrorCode();
     }
     if (status) {
-        out.println("<h1>Login admin riuscita!</h1>");
+%>
+    <jsp:forward page="admin.jsp" />
+<%
     } else {
-        out.println("<h1>Login admin NON riuscita!</h1>");
+        out.println("<h1>Login user NON riuscita!</h1>");
+
     }
 %>

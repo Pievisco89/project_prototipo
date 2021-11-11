@@ -57,7 +57,7 @@
 
                     <i class="fas fa-user-check"></i>
                     <div id="tit">
-                        <h1>Utente</h1>
+                        <h1>Admin</h1>
                     </div>
           
                     <div id="inf">
@@ -66,55 +66,24 @@
                 </div>
             
                 <div id="rep">
-                    <table>
+                    <table>                       
                         <tr>
-                            <td>
-                                <div>
-                                    <div id="icon">
-                                        <i class="fas fa-calendar-day"></i>
-                                    </div>
-                                    <div id="primo">
-                                        <span id="tipo">Data Di Nascita</span>
-                                    </div>
-                                    <div id="secondo">
-                                        <span><%out.println(session.getAttribute("Ddn"));%></span>
-                                    </div>
-                                </div>
-                            </td>
+                          <td>
+                            <div>
+                              <div id="icon">
+                                <i class="fas fa-user-circle"></i>
+                              </div>
+                              <div id="primo"> 
+                                <span id="tipo">Username</span>
+                              </div>
+                              <div id="secondo">
+                                <span><%out.println(session.getAttribute("Email"));%></span>
+                              </div>
+                            </div>
+                          </td>
                         </tr>
                         <tr>
-                            <td>
-                                <div>
-                                    <div id="icon">  
-                                        <i class="fas fa-address-card"></i>
-                                    </div>
-                                    <div id="primo">
-                                        <span id="tipo">Codice Fiscale</span>
-                                    </div>
-                                    <div id="secondo">
-                                        <span><%out.println(session.getAttribute("Cf"));%></span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <div>
-                                    <div id="icon">
-                                        <i class="fas fa-user-circle"></i>
-                                    </div>
-                                    <div id="primo"> 
-                                        <span id="tipo">Username</span>
-                                    </div>
-                                    <div id="secondo">
-                                        <span><%out.println(session.getAttribute("Email"));%></span>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                        <td id="ultimo">
+                          <td id="ultimo">
                             <div>
                                 <div id="icon">
                                     <i class="fas fa-key"></i>
@@ -138,21 +107,20 @@
                                     
                                 </div>
                             </div>
-                        </td>
+                          </td>
                         </tr>
                     </table>
             
                     <div class="box-scelta">
-                        <div id="left">
-                            <a href="posizioni.jsp"><button>Visualizza posizioni</button></a>
-                        </div>
-                        <div id="right">
-                            <h4>Inserisci curriculum:</h4>            
-                            <a href="#"><button><input type="file" name="" id=""></button></a>
-                        </div>
-                        <div id="right">
-                            <a href="candidature.jsp"><button>Visualizza candidature</button></a>
-                        </div>
+                      <div id="left">
+                        <a href="gest_pos.jsp"><button>Gestisci posizioni</button></a>
+                      </div>
+                      <%-- <div id="right">           
+                        <a href="#"><button><input type="file" name="" id=""></button></a>
+                      </div> --%>
+                      <div id="right">
+                        <a href="gest_cand.jsp"><button>Gestisci candidature</button></a>
+                      </div>
                     </div>
                 
                 </div>
@@ -164,13 +132,3 @@
     </body>
 
 </html>
-
-<%-- <%
-        }
-    }
-    else{
-%>
-<jsp:forward page="Scelta.jsp"/>
-<%
-    }
-%> --%>
