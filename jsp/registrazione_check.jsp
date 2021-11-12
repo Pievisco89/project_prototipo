@@ -41,4 +41,8 @@
     } catch (SQLException e) {
         e.getErrorCode();
     }
+    
 %>
+<script>
+    window.location.href = '../login_user.html';
+</script>

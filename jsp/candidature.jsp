@@ -66,10 +66,11 @@
               String URL = "jdbc:mysql://localhost:3306/project_work";
               String USERNAME = "root";
               String PASSWORD = "";
+              String cod_fisc = session.getAttribute("Cf").toString();
               try {
                 Class.forName(DRIVER);
                 Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);   
-                String sel = ("SELECT t1.codCandidatura, t1.codFiscale, t2.stato_domanda, t3.nome FROM utente_candidatura t1 INNER JOIN candidatura t2 ON t1.codCandidatura = t2.idCandidatura   INNER JOIN posizione t3 ON t2.cod_posizione = t3.id WHERE t1.codFiscale = 'aaaaaaaaaaaaaaaa';");
+                String sel = ("SELECT t1.codCandidatura, t1.codFiscale, t2.stato_domanda, t3.nome FROM utente_candidatura t1 INNER JOIN candidatura t2 ON t1.codCandidatura = t2.idCandidatura   INNER JOIN posizione t3 ON t2.cod_posizione = t3.id WHERE t1.codFiscale = '" + cod_fisc + "';");
                 Statement st = con.createStatement();
                 ResultSet rs = st.executeQuery(sel);
                 while (rs.next()){

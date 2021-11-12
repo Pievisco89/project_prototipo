@@ -109,7 +109,7 @@
 
                 <input type="submit" value="Login">
 
-                <h4 style="color:rgb(165, 165, 165)">Sei già iscritto?<a style="text-decoration: none;color:whitesmoke" href="login.html">Accedi</a></h4>
+                <h4 style="color:rgb(165, 165, 165)">Sei già iscritto?<a style="text-decoration: none;color:whitesmoke" href="../login_user.html">Accedi</a></h4>
 
             </form>
         </section>
