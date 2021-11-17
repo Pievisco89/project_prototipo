@@ -56,7 +56,7 @@
               <td>Cod Candidatura</td>
               <td>Cod fiscale:</td>
               <td>Stato domanda:</td>
-              <td>nome:</td>
+              <td>Punteggio Test:</td>
             </tr>
           </thead>
           <tbody>
@@ -70,7 +70,7 @@
               try {
                 Class.forName(DRIVER);
                 Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);   
-                String sel = ("SELECT t1.codCandidatura, t1.codFiscale, t2.stato_domanda, t3.nome FROM utente_candidatura t1 INNER JOIN candidatura t2 ON t1.codCandidatura = t2.idCandidatura   INNER JOIN posizione t3 ON t2.cod_posizione = t3.id WHERE t1.codFiscale = '" + cod_fisc + "';");
+                String sel = ("SELECT t1.codCandidatura, t1.codFiscale, t2.stato_domanda, t3.punteggio FROM utente_candidatura t1 INNER JOIN candidatura t2 ON t1.codCandidatura = t2.idCandidatura INNER JOIN test t3 ON t2.cod_posizione = t3.idTest WHERE t1.codFiscale = '" + cod_fisc + "';");
                 Statement st = con.createStatement();
                 ResultSet rs = st.executeQuery(sel);
                 while (rs.next()){
@@ -80,8 +80,7 @@
                 <td><%= rs.getInt("t1.codCandidatura") %></td>
                 <td> <%= rs.getString("t1.codFiscale") %> </td>
                 <td> <%= rs.getBoolean("t2.stato_domanda") %> </td>
-                <td> <%= rs.getString("t3.nome") %> </td>
-
+                <td> <%= rs.getInt("t3.punteggio") %> </td>
               </tr>
             
             <% 

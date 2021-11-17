@@ -81,7 +81,7 @@
                 </td>
                 <td> <%= rs.getBoolean("stato") %> </td>
                 <td>   
-                  <input type="radio" name="scelta" value="<%= rs.getInt("id") %> ">
+                  <input type="radio" name="scelta" value="<%= rs.getInt("id") %>">
                 </td>
               </tr>
             
