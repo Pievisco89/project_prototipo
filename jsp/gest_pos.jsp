@@ -50,61 +50,74 @@
       </nav>
 
       <section class="table-container">
-        <div id="rep">
-        <form action="stato_pos.jsp" method="POST">
-          <table>
+        <table>
+          <thead>
             <tr>
-              <td><h1>Posizione</h1></td>
-              <td><h1>Stato</h1></td>
+              <td>Id posizione</td>
+              <td>Nome posizione:</td>
+              <td>Stato:</td>
             </tr>
-            <tr>
-              <td>
-                <div class="select">
-                  <select name="farm" id="slct" required>
-                    <option selected disabled>Seleziona posizione</option>
-                    <%
-                      String DRIVER="com.mysql.cj.jdbc.Driver";
-                      String URL="jdbc:mysql://localhost:3306/project_work";
-                      String USERNAME="root";
-                      String PASSWORD="";
-                      try{
-                        Class.forName(DRIVER);
-                          Connection con=DriverManager.getConnection(URL,USERNAME,PASSWORD);
-                          String sql=("SELECT id, nome, stato FROM posizione");
-                          Statement st = con.createStatement();
-                          ResultSet rs= st.executeQuery(sql);
-                          while(rs.next()){
-                            out.println("<option value=" + "'"  + rs.getString("id") + "'" + ">" + rs.getString("nome") + "</option>");
-                          }
-                          con.close();
-                          }
-                          catch(SQLException e){
-                            e.getErrorCode();
-                          }
-                        %>                                                     
-                    </select>
-                  </div> 
-                </td> 
-                <td> 
-                  <div class="select">
-                    <select name="farm" required>
-                      <option selected disabled>Stato</option>
-                                                                           
-                    </select>
-                  </div>
-                </td>
-                                
-          </tr>  
-                 
-          <tr>
-            <td colspan="3">
-              <button>inserisci</button>
-            </td>
-          </tr>
+          </thead>
+          <tbody>
+          
+            <%
+              String DRIVER="com.mysql.cj.jdbc.Driver";
+              String URL="jdbc:mysql://localhost:3306/project_work";
+              String USERNAME="root";
+              String PASSWORD="";
+              try{
+                Class.forName(DRIVER);
+                Connection con=DriverManager.getConnection(URL,USERNAME,PASSWORD);
+                String sql=("SELECT id, nome, stato FROM posizione");
+                Statement st = con.createStatement();
+                ResultSet rs= st.executeQuery(sql);
+                while(rs.next()){
+            %>
+            
+              <tr>
+                <td><%= rs.getInt("id") %></td>
+                <td><%= rs.getString("nome") %></td>
+                <td>
+                  
+                  <% 
                 
-          </table>
+                    rs.getBoolean("stato");
+                    if(rs.getBoolean("stato")){
+                      
+                      out.println("Libero");
+                    
+                    }else{
+
+                      out.println("Occupato");
+
+                    }
+                    
+                  %>
+                
+                </td>
+                <form action="modifica_pos.jsp" method="post">
+                  <td><button id="modifica" name="modifica" value="<%= rs.getInt("id") %>"><i class="fas fa-pencil-alt"></i></button></td>
+                </form>
+              </tr>
+            
+            <% 
+                }
+                    con.close();
+                } catch (SQLException e) {
+                    e.getErrorCode();
+                }
+              
+            %>      
+            
+          </tbody>
+        </table>
+        <form action="aggiungi_pos.jsp" method="post">
+          <button><i class="fas fa-plus"></i></button>
+          <label>inserire nome posizione:</label>
+          <input type="text" id="nome" name="nome">  
+          <label>inserire stato posizione:</label>
+          /* FARE SELECT OPTION */
         </form>
-        </div>
       </section>
       
 

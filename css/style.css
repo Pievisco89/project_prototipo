@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 /* Nav-bar */
 nav{
   display: flex;
@@ -62,17 +66,21 @@ nav img{
   /* background-image: url('../img/prova.jpg');
   background-size: cover;
   background-position: center; */
-  margin: 15px auto;
+  margin: 10px auto;
 }
 
 .content{
   display: flex;
   justify-content: space-around;
-  height: 220px;
+  height: 250px;
   width: 80%;
   background-color: coral;
-  margin: 10px auto;
+  margin: 5px auto;
   padding: 10px;
+}
+
+table{
+  margin-right: 5px;
 }
 
 table tr td{
@@ -88,8 +96,18 @@ footer{
   margin: 0 auto;
 }
 
+footer ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
 footer li{
   margin: 0 20px;
+}
+
+footer li i{
+  font-size: 25px;
 }
 
 /* media query */
