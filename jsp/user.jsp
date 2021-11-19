@@ -148,7 +148,7 @@
                         </div>
                         <div id="right">
                             <h4>Inserisci curriculum:</h4>            
-                            <a href="#"><button><input type="file" name="" id=""></button></a>
+                            <a href="curriculum.jsp"><button>Inserisci CV e skills</button></a>
                         </div>
                         <div id="right">
                             <a href="candidature.jsp"><button>Visualizza candidature</button></a>

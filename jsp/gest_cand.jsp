@@ -70,20 +70,29 @@
                 try {
                   Class.forName(DRIVER);
                   Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);   
-                  String sel = ("SELECT t1.codCandidatura, t1.codFiscale, t3.punteggio FROM utente_candidatura t1 INNER JOIN candidatura t2 ON t1.codCandidatura = t2.idCandidatura INNER JOIN test t3 ON t2.codTest = t3.idTest order by t3.punteggio desc;");
+                  String sel = ("SELECT t1.codCandidatura, t1.codFiscale, t2.stato_domanda, t3.punteggio FROM utente_candidatura t1 INNER JOIN candidatura t2 ON t1.codCandidatura = t2.idCandidatura INNER JOIN test t3 ON t2.codTest = t3.idTest order by t3.punteggio desc;");
                   Statement st = con.createStatement();
                   ResultSet rs = st.executeQuery(sel);
                   while (rs.next()){
+                    if(rs.getBoolean("stato_domanda")){
+                      out.println("<tr style=" + "background-color:green;" + ">");
               %>
-              
-                <tr>
-                  <td><%= rs.getInt("t1.codCandidatura") %></td>
-                  <td> <%= rs.getString("t1.codFiscale") %> </td>
-                  <td> <%= rs.getInt("t3.punteggio") %> </td>
-                  <td> <input type="checkbox" name="<%= rs.getInt("t1.codCandidatura") %>" id=""> </td>
-                </tr>
-              
+                    <td><%= rs.getInt("t1.codCandidatura") %></td>
+                    <td><%= rs.getString("t1.codFiscale") %></td>
+                    <td><%= rs.getInt("t3.punteggio") %></td>
+                    <td><button id="check" name="check" value="<%=rs.getInt("t1.codCandidatura")%>"><i class="fas fa-check"></i></button></td>
+                  </tr>
+              <%
+                    }else{
+                      out.println("<tr style=" + "background-color:red;" + ">");
+              %>    
+                    <td><%= rs.getInt("t1.codCandidatura") %></td>
+                    <td><%= rs.getString("t1.codFiscale") %></td>
+                    <td><%= rs.getInt("t3.punteggio") %></td>
+                    <td><button id="check" name="check" value="<%=rs.getInt("t1.codCandidatura")%>"><i class="fas fa-check"></i></button></td>
+                  </tr>
               <% 
+                    }
 
 
                   }
@@ -96,7 +105,6 @@
               
             </tbody>
           </table>
-          <button>Invia candidatura</button>
         </form>
       </section>
       

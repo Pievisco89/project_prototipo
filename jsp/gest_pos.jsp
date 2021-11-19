@@ -110,13 +110,16 @@
             %>      
             
           </tbody>
-        </table>
+        </table>     
         <form action="aggiungi_pos.jsp" method="post">
-          <button><i class="fas fa-plus"></i></button>
+        <button><i class="fas fa-plus"></i></button>
           <label>inserire nome posizione:</label>
           <input type="text" id="nome" name="nome">  
           <label>inserire stato posizione:</label>
-          /* FARE SELECT OPTION */
+          <select id="stato" name="stato">
+            <option value="true">Libero</option>
+            <option value="false">Occupato</option>
+          </select>
         </form>
       </section>
       
