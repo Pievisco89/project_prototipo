@@ -15,9 +15,42 @@
 .pubblicita_Aziendale p{
   padding-top: 9px;
   padding-left: 70px;
-  width: 40%;
+  width: 90%;
   font-size: 40px;
   text-align: left;
-  line-height: 50px!important;
+  line-height: 50px;
 }
 
+.contenuto{
+  width: 40%;
+  overflow-y: scroll;
+}
+
+#immagine{
+  width: 60%;
+}
+
+.foto{
+  background-image: url('../img/about.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 1024px){
+  .pubblicita_Aziendale{
+    flex-direction: column;
+  }
+
+  .pubblicita_Aziendale p{
+    font-size: 20px;
+  }
+
+  .contenuto{
+    width: 100%;
+  }
+
+  #immagine{
+    height: 350px;
+    width: 100%;
+  }
+}

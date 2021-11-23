@@ -51,18 +51,18 @@
 
                     <div class="modal-content-container">
 
-                        <h1>Congratulations, Quiz Completed.</h1>
+                        <h1>Congratulazioni, Quiz completato.</h1>
                         <form action="jsp/test.jsp" method="post">
                             <div class="grade-details">
-                                <p>Attempts : 1</p>
-                                <p>Wrong Answers : <span id="wrong-answers"></span></p>
-                                <p>Right Answers : <span id="right-answers"> </span></p>
-                                <p>Grade : <span id="grade-percentage"></span>%</p>
+                                <p>Tentativi : 1</p>
+                                <p>Risposte errate : <span id="wrong-answers"></span></p>
+                                <p>Risposte esatte : <span id="right-answers"> </span></p>
+                                <p>Percentuale : <span id="grade-percentage"></span>%</p>
                                 <p><span id="remarks"></span></p>
                             </div>
                             
                             <div class="modal-button-container">
-                                <button onclick="closeScoreModal()" id="punteggio" name="punteggio">Continue</button>
+                                <button onclick="closeScoreModal()" id="punteggio" name="punteggio">Continua</button>
                             </div>
                         </form>
                     </div>
@@ -72,8 +72,8 @@
                 <div class="game-quiz-container">
 
                     <div class="game-details-container">
-                        <h1>Score : <span id="player-score"></span> / 10</h1>
-                        <h1> Question : <span id="question-number"></span> / 10</h1>
+                        <h1>Punteggio: <span id="player-score"></span> / 10</h1>
+                        <h1> Domanda: <span id="question-number"></span> / 10</h1>
                     </div>
 
                     <div class="game-question-container">
@@ -85,10 +85,10 @@
                     <div class="modal-container" id="option-modal">
 
                             <div class="modal-content-container">
-                                <h1>Please Pick An Option</h1>
+                                <h1>Seleziona un'opzione</h1>
 
                                 <div class="modal-button-container">
-                                    <button onclick="closeOptionModal()">Continue</button>
+                                    <button onclick="closeOptionModal()">Continua</button>
                                 </div>
 
                             </div>
@@ -122,7 +122,7 @@
                     </div>
 
                     <div class="next-button-container">
-                        <button onclick="handleNextQuestion()">Next Question</button>
+                        <button onclick="handleNextQuestion()">Avanti</button>
                     </div>
 
                 </div>

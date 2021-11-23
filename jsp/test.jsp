@@ -1,6 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
-
+<%
+    if(session.getAttribute("Utente")!=null && session.getAttribute("Utente").equals(true) && session.getAttribute("Tipo").equals("user")){
+%>
 <%
     String DRIVER = "com.mysql.cj.jdbc.Driver";
     String URL = "jdbc:mysql://localhost:3306/project_work";
@@ -38,3 +40,12 @@
 <script>
     window.location.href = 'user.jsp';
 </script>
+<%
+      }else{
+%>
+  <script>
+    window.location.href = '../login_user.html';
+  </script> 
+<%
+      }
+%>

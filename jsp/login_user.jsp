@@ -18,6 +18,8 @@
             if (rs.getString("email").equals(user) && rs.getString("password").equals(password)) {
                 status = true;
                 String nome_cognome = rs.getString("nome") + " " + rs.getString("cognome");
+                session.setAttribute("Utente", status);
+                session.setAttribute("Tipo", "user");
                 session.setAttribute("Welcome", nome_cognome);
                 session.setAttribute("Ddn",  rs.getString("dataDiNascita"));
                 session.setAttribute("Cf",  rs.getString("codiceFiscale"));
@@ -33,10 +35,16 @@
     if (status) {
         //out.println("<h1>Login user riuscita!</h1>");
 %> 
-    <jsp:forward page="user.jsp" />
+<script>
+    window.location.href = 'user.jsp';
+</script> 
 <%
     } else {
-        out.println("<h1>Login user NON riuscita!</h1>");
-
+        //out.println("<h1>Login user NON riuscita!</h1>");
+%>
+<script>
+    window.location.href = '../login_user.html';
+</script> 
+<%
     }
 %>

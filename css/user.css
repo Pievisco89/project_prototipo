@@ -1,17 +1,9 @@
 .user-content{
-  /* height: 500px; */
   width: 80%;
   margin: 5px auto;
-  background-color: aquamarine;
+  overflow-y: auto;
+  padding: 2%;
 }
-
-/* *{
-  margin: 0; 
-  padding: 0; 
-  text-decoration: none; 
-  list-style: none; 
-  box-sizing: border-box;
-} */
 
 nav ul{
   float: right; 
@@ -71,19 +63,19 @@ h1 {
 
 #wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: left;
-  background: white;
-  height: 80vh;
-  padding: 0;
+  justify-content: center;
+  background-color: rgb(230, 227, 225);
+  min-height: 80vh;
+  padding: 2%;
 }
 
 .box-scelta{
   width: 100%;
   margin-top: 3%;
-  display: flex;
   background: white;
+  display: flex;
   flex-direction: row;
   align-items: center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -93,32 +85,35 @@ h1 {
 }
 
 #user {
-  width: 30%;
+  width: 40%;
   margin: 3%;
   /* margin-top: -5%; */
   display: flex;
-  background: white;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   padding: 1%;
 }
 
 #rep{
-  width: 60%;
+  width: 80%;
   display: flex;
-  background: white;
   flex-direction: column;
-  align-items: left;
-  /* margin-top: 1%; */
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
 }
 
 #tit{
   width: 70%;
-  margin-top: 1%;
-  margin-bottom: 1%;
   font-family: 'Lato', sans-serif;
+}
+
+#tit h1{
+  font-size: 26px;
 }
 
 #inf{
@@ -165,7 +160,6 @@ p{
   text-align: center; 
   font-size: 20px; 
   color: #004f7d;
-  margin-top: 1%;
   text-transform: uppercase;
 }
 
@@ -180,13 +174,14 @@ table{
 }
 
 td{
-  width: 80%;
+  width: 90%;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
 
 table tr td{
   border-style: none;
+  padding: 2px;
 }
 
 span{
@@ -257,4 +252,22 @@ button{
 
 a{
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px){
+  #user{
+    width: 80%;
+  }
+
+  .user-content{
+    overflow-y: auto;
+  }
+
+  .box-scelta{
+    flex-direction: column;
+  }
+
+  #rep span{
+    font-size: 14px;
+  }
 }

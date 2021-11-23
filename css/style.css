@@ -59,54 +59,59 @@ nav img{
   margin: 0 auto;
 }
 
-.banner{
-  width: 80%;
-  height: 250px;
-  background-color: rgb(100, 56, 223);
-  /* background-image: url('../img/prova.jpg');
+.banner{ 
+  width: 70%;
+  min-height: 500px;
+  background-image: url('../img/foto1.jpeg');
   background-size: cover;
-  background-position: center; */
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 10px auto;
+}
+
+.banner-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 500px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .content{
   display: flex;
-  justify-content: space-around;
-  height: 250px;
-  width: 80%;
-  background-color: coral;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 300px;
+  min-width: 80%;
+  max-width: 80%;
+  overflow: auto;
   margin: 5px auto;
   padding: 10px;
 }
 
-table{
-  margin-right: 5px;
+.content img{
+  max-width: 35%;
+}
+
+table.first{
+  max-width: 55%;
 }
 
 table tr td{
-  border: 1px solid black;
   padding: 0 3px;
+  font-size: 15px;
 }
 
 /* Footer */
 footer{
-  height: 95px;
-  width: 80%;
-  background-color: rgb(189, 44, 44);
+  min-height: 10vh;
+  background-color: #5d4954;
   margin: 0 auto;
 }
 
-footer ul{
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-footer li{
-  margin: 0 20px;
-}
-
-footer li i{
+footer a i{
   font-size: 25px;
 }
 
@@ -115,12 +120,29 @@ footer li i{
   .nav-links{
     width: 60%;
   }
+
+  .content{
+    width: 95%;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .content img{
+    max-width: 55%;
+    margin-bottom: 45px;
+  }
+
+  table.first{
+    min-width: 65%;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
   body{
     overflow-x: hidden;
   }
+
   .nav-links{
     position: absolute;
     right: 0px;
@@ -139,6 +161,14 @@ footer li i{
   }
   .burger{
     display: block;
+  }
+
+  /* ol.breadcrump{
+    display: none;
+  } */
+
+  table{
+    width: 90%;
   }
 }
 
@@ -159,8 +189,9 @@ footer li i{
 /*button scopri di più*/
 .button_scopri_di_piu{
   text-align: center;
-  margin-bottom: 5%;
+  margin: 50px auto;
 }
+
 .button_scopri_di_piu button{
   background-color: #2276b6;
   font-weight: 403px;
@@ -168,6 +199,7 @@ footer li i{
   cursor: pointer;
   
 }
+
 .button_scopri_di_piu a{
   outline: none;
   cursor: pointer;
@@ -181,11 +213,8 @@ footer li i{
   border: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-radius: 17px;
- 
-  
+  border-radius: 17px;  
 }
-
 
 .button_scopri_di_piu a:hover{
   background-color:	#003399;
@@ -200,18 +229,32 @@ footer li i{
  
 }
 
-
 #chiSiamoId{
   text-align: center;
   
 }
+
 .foto1{
   text-align: center;
 }
+
 .contenitoreFraseChiSimo{
   margin-top: 2%;
   margin-bottom: 4%;
   text-indent: 30px;
+  text-align: center;
+}
+
+.banner h1{
+  color: white;
+  font-size: 30px;
+}
+
+#frase{
+  width: 90%;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
   text-align: center;
 }
 
@@ -220,6 +263,7 @@ footer li i{
   text-align: center;
   margin-bottom: 5%;
 }
+
 .button_scopri_di_piu button{
   background-color: #2276b6;
   font-weight: 403px;
@@ -227,6 +271,7 @@ footer li i{
   cursor: pointer;
   
 }
+
 .button_scopri_di_piu a{
   outline: none;
   cursor: pointer;
@@ -241,10 +286,7 @@ footer li i{
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 17px;
- 
-  
 }
-
 
 .button_scopri_di_piu a:hover{
   background-color:	#003399;

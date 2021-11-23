@@ -1,229 +1,139 @@
 const questions = [
     {
-        question: "How many days makes a week ?",
-        optionA: "10 days",
-        optionB: "14 days",
-        optionC: "5 days",
-        optionD: "7 days",
-        correctOption: "optionD"
+        question: "cosa significa sql ?",
+        optionA: "Structured Query Language",
+        optionB: "Structured quord Linux",
+        optionC: "Structured quad-core lines",
+        optionD: "Security question libreries",
+        correctOption: "optionA"
     },
 
     {
-        question: "How many players are allowed on a soccer pitch ?",
-        optionA: "10 players",
-        optionB: "11 players",
-        optionC: "9 players",
-        optionD: "12 players",
+        question: "Che cos'è java ?",
+        optionA: "Linguaggio di ipertesto",
+        optionB: "Linguaggio di programmazione",
+        optionC: "Linguaggio straniero",
+        optionD: "Linguaggio isoterico molecolare",
         correctOption: "optionB"
     },
 
     {
-        question: "Who was the first President of USA ?",
-        optionA: "Donald Trump",
-        optionB: "Barack Obama",
-        optionC: "Abraham Lincoln",
-        optionD: "George Washington",
+        question: "In HTML con che carattere si apre un tag ?",
+        optionA: "=",
+        optionB: "*",
+        optionC: "!",
+        optionD: "<",
         correctOption: "optionD"
     },
 
     {
-        question: "30 days has ______ ?",
-        optionA: "January",
-        optionB: "December",
-        optionC: "June",
-        optionD: "August",
+        question: "Cosa vuol dire JVM ?",
+        optionA: "Java visual manual",
+        optionB: "Jsp virtual monolitich",
+        optionC: "Java virtual machine",
+        optionD: "James Clerk Maxwell velocity motorbike",
         correctOption: "optionC"
     },
 
     {
-        question: "How manay hours can be found in a day ?",
-        optionA: "30 hours",
-        optionB: "38 hours",
-        optionC: "48 hours",
-        optionD: "24 hours",
+        question: "Ogni quante ore bisogna avere 15 minuti di pausa dal pc ?",
+        optionA: "4 ore",
+        optionB: "9 ore",
+        optionC: "13 ore",
+        optionD: "2 ore",
         correctOption: "optionD"
     },
 
     {
-        question: "Which is the longest river in the world ?",
-        optionA: "River Nile",
-        optionB: "Long River",
-        optionC: "River Niger",
-        optionD: "Lake Chad",
+        question: "Posso avere piu campi primary key in un tabella di un db ?",
+        optionA: "No è uno ed è univoco",
+        optionB: "Si ma almeno 5",
+        optionC: "Massimo 2",
+        optionD: "Puoi averne una per ogni campo",
         correctOption: "optionA"
     },
 
     {
-        question: "_____ is the hottest Continent on Earth ?",
-        optionA: "Oceania",
-        optionB: "Antarctica",
-        optionC: "Africa",
-        optionD: "North America",
+        question: "Cosa riduce il filtro luce blu ?",
+        optionA: "Le luci blu della porta usb",
+        optionB: "la batteria del pc, nella sezione blu",
+        optionC: "La luce blu dei pixel dello schermo",
+        optionD: "rimuove la retroilluminazione della tastiera",
         correctOption: "optionC"
     },
 
     {
-        question: "Which country is the largest in the world ?",
-        optionA: "Russia",
-        optionB: "Canada",
-        optionC: "Africa",
-        optionD: "Egypt",
+        question: "int è una variabile di tipo ?",
+        optionA: "Numerico intero",
+        optionB: "Frazionale",
+        optionC: "Numerico binario",
+        optionD: "Numerico booleano",
         correctOption: "optionA"
     },
 
     {
-        question: "Which of these numbers is an odd number ?",
-        optionA: "Ten",
-        optionB: "Twelve",
-        optionC: "Eight",
-        optionD: "Eleven",
+        question: "Una variabile Float è una variabile ?",
+        optionA: "Numerica volante chiamata anche temporanea",
+        optionB: "Usa e getta",
+        optionC: "volante",
+        optionD: "Numerica con la virgola",
         correctOption: "optionD"
     },
 
     {
-        question: `"You Can't see me" is a popular saying by`,
-        optionA: "Eminem",
-        optionB: "Bill Gates",
-        optionC: "Chris Brown",
-        optionD: "John Cena",
+        question: `"Cosa significa in sql SELECT * FROM AUTO`,
+        optionA: "Seleziona le auto asterisco",
+        optionB: "Seleziona la tabella auto dove la chiave primaria è 1",
+        optionC: "Cambia targa dell'auto",
+        optionD: "Seleziona e mostra tutti i campi dalla tabella auto",
         correctOption: "optionD"
     },
 
     {
-        question: "Where is the world tallest building located ?",
-        optionA: "Africa",
-        optionB: "California",
-        optionC: "Dubai",
-        optionD: "Italy",
+        question: "Cosa succede se si preme in windows Alt+f4 ?",
+        optionA: "Apre un applicazione",
+        optionB: "avvia una chiamata sul C:",
+        optionC: "Chiude l'applicazione in utilizzo",
+        optionD: "Apre una nuova finestra",
         correctOption: "optionC"
     },
 
     {
-        question: "The longest river in the United Kingdom is ?",
-        optionA: "River Severn",
-        optionB: "River Mersey",
-        optionC: "River Trent",
-        optionD: "River Tweed",
+        question: "Quale delle seguenti istruzioni in sql seleziona campi dal db ?",
+        optionA: "Select",
+        optionB: "update",
+        optionC: "get",
+        optionD: "extract",
         correctOption: "optionA"
     },
 
 
     {
-        question: "How many permanent teeth does a dog have ?",
-        optionA: "38",
-        optionB: "42",
-        optionC: "40",
-        optionD: "36",
+        question: "In che linguaggio in scritto windows ?",
+        optionA: "java",
+        optionB: "C/C++/assembly",
+        optionC: "ruby",
+        optionD: "scratch",
         correctOption: "optionB"
     },
 
     {
-        question: "Which national team won the football World cup in 2018 ?",
-        optionA: "England",
-        optionB: "Brazil",
-        optionC: "Germany",
-        optionD: "France",
+        question: "Qual'è la sintassi per mandare in output una stringa su java ?",
+        optionA: "Ex.line.out:hello",
+        optionB: "system.deline.export.out<<=hello",
+        optionC: "print('hello')",
+        optionD: "System.out.println('Hello')",
         correctOption: "optionD"
     },
 
     {
-        question: "Which US state was Donald Trump Born ?",
-        optionA: "New York",
-        optionB: "California",
-        optionC: "New Jersey",
-        optionD: "Los Angeles",
+        question: "Chi creò microsoft ?",
+        optionA: "Bill gates",
+        optionB: "Mark zuckenberg",
+        optionC: "X Æ A-12",
+        optionD: "Robert downey jr",
         correctOption: "optionA"
     },
-
-    {
-        question: "How man states does Nigeria have ?",
-        optionA: "24",
-        optionB: "30",
-        optionC: "36",
-        optionD: "37",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "____ is the capital of Nigeria ?",
-        optionA: "Abuja",
-        optionB: "Lagos",
-        optionC: "Calabar",
-        optionD: "Kano",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "Los Angeles is also known as ?",
-        optionA: "Angels City",
-        optionB: "Shining city",
-        optionC: "City of Angels",
-        optionD: "Lost Angels",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "What is the capital of Germany ?",
-        optionA: "Georgia",
-        optionB: "Missouri",
-        optionC: "Oklahoma",
-        optionD: "Berlin",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "How many sides does an hexagon have ?",
-        optionA: "Six",
-        optionB: "Sevene",
-        optionC: "Four",
-        optionD: "Five",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "How many planets are currently in the solar system ?",
-        optionA: "Eleven",
-        optionB: "Seven",
-        optionC: "Nine",
-        optionD: "Eight",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "Which Planet is the hottest ?",
-        optionA: "Jupitar",
-        optionB: "Mercury",
-        optionC: "Earth",
-        optionD: "Venus",
-        correctOption: "optionB"
-    },
-
-    {
-        question: "where is the smallest bone in human body located?",
-        optionA: "Toes",
-        optionB: "Ears",
-        optionC: "Fingers",
-        optionD: "Nose",
-        correctOption: "optionB"
-    },
-
-    {
-        question: "How many hearts does an Octopus have ?",
-        optionA: "One",
-        optionB: "Two",
-        optionC: "Three",
-        optionD: "Four",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "How many teeth does an adult human have ?",
-        optionA: "28",
-        optionB: "30",
-        optionC: "32",
-        optionD: "36",
-        correctOption: "optionC"
-    }
 
 ]
 
@@ -349,15 +259,15 @@ function handleEndGame() {
 
     // condition check for player remark and remark color
     if (playerScore <= 3) {
-        remark = "Bad Grades, Keep Practicing."
+        remark = "Non ti assumiamo."
         remarkColor = "red"
     }
     else if (playerScore >= 4 && playerScore < 7) {
-        remark = "Average Grades, You can do better."
+        remark = "Puoi migliorare."
         remarkColor = "orange"
     }
     else if (playerScore >= 7) {
-        remark = "Excellent, Keep the good work going."
+        remark = "Ottimo!."
         remarkColor = "green"
     }
     const playerGrade = (playerScore / 10) * 100
