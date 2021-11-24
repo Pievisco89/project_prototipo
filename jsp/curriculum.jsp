@@ -47,29 +47,44 @@
       <section class="container-form">
         <form action="skill.jsp" method="post">
           <div class="input-container"> 
-            <label>Inserire Curriculum:</label>
-            <input type="file" id="cv" name="cv" required>
-          </div>  
-          <div class="input-container">
-            <label>Inserire skill:</label>
-                <%
+            <%
                 String DRIVER="com.mysql.cj.jdbc.Driver";
                 String URL="jdbc:mysql://localhost:3306/project_work";
                 String USERNAME="root";
                 String PASSWORD="";
-                int k=0;
+                String cv = "";
                 try{
                     Class.forName(DRIVER);
                     Connection con=DriverManager.getConnection(URL,USERNAME,PASSWORD);
+                    String sel2 = ("SELECT curriculum FROM utente WHERE codiceFiscale ='" + session.getAttribute("Cf") + "'");
+                    Statement st2 = con.createStatement();
+                    ResultSet rs2= st2.executeQuery(sel2);
+                    while(rs2.next()){
+                        cv = rs2.getString("curriculum");
+                    }
+                    if(cv == ""){
+            %>
+            <label>Inserire Curriculum:</label>
+            <input type="file" id="cv" name="cv" required>
+            <%
+                }else{
+            %>
+            <label>Modifica Curriculum:</label>
+            <input type="file" id="cv" name="cv">
+            <%
+                }
+            %>
+          </div>  
+          <div class="input-container">
+            <label>Inserire skill:</label>
+                <%  
                     String sel=("SELECT idSkill, nomeSkill FROM skill;");
                     Statement st = con.createStatement();
                     ResultSet rs= st.executeQuery(sel);
                     while(rs.next()){
                       out.println("<input class='speciale' name='speciale' type='checkbox' value='" + rs.getInt("idSkill") + "'>");
                       out.println("<label>" + rs.getString("nomeSkill") + "</label>");
-                      k++;
                     }
-                    session.setAttribute("lunghezza", k);
                         con.close();
                     } catch (SQLException e) {
                         e.getErrorCode();
