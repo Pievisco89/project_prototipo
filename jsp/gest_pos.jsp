@@ -45,7 +45,7 @@
       </nav>
 
       <section class="table-container pt-2">
-        <table class="table" style="width: 70%">
+        <table class="table" style="width: 70%;">
           <thead class="table-dark">
             <tr>
               <td>Id posizione</td>
@@ -107,7 +107,7 @@
         <form action="aggiungi_pos.jsp" method="post">
           <div class="container pos">        
             <label>Inserire nome posizione:</label>
-            <input type="text" id="nome" name="nome"> 
+            <input type="text" id="nome" name="nome" style="width: 50%"> 
           </div> 
           <div class="container pos">  
             <label>Inserire stato posizione:</label>

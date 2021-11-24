@@ -1,15 +1,15 @@
 const questions = [
     {
-        question: "cosa significa sql ?",
+        question: "Cosa significa SQL?",
         optionA: "Structured Query Language",
-        optionB: "Structured quord Linux",
-        optionC: "Structured quad-core lines",
-        optionD: "Security question libreries",
+        optionB: "Structured Quord Linux",
+        optionC: "Structured Quad-Core Lines",
+        optionD: "Security Question Libraries",
         correctOption: "optionA"
     },
 
     {
-        question: "Che cos'è java ?",
+        question: "Che cos'è java?",
         optionA: "Linguaggio di ipertesto",
         optionB: "Linguaggio di programmazione",
         optionC: "Linguaggio straniero",
@@ -18,7 +18,7 @@ const questions = [
     },
 
     {
-        question: "In HTML con che carattere si apre un tag ?",
+        question: "In HTML con che carattere si apre un tag?",
         optionA: "=",
         optionB: "*",
         optionC: "!",
@@ -27,16 +27,16 @@ const questions = [
     },
 
     {
-        question: "Cosa vuol dire JVM ?",
-        optionA: "Java visual manual",
-        optionB: "Jsp virtual monolitich",
-        optionC: "Java virtual machine",
+        question: "Cosa vuol dire JVM?",
+        optionA: "Java Visual Manual",
+        optionB: "Jsp Virtual Monolitich",
+        optionC: "Java Virtual Machine",
         optionD: "James Clerk Maxwell velocity motorbike",
         correctOption: "optionC"
     },
 
     {
-        question: "Ogni quante ore bisogna avere 15 minuti di pausa dal pc ?",
+        question: "Ogni quante ore bisogna avere 15 minuti di pausa dal pc?",
         optionA: "4 ore",
         optionB: "9 ore",
         optionC: "13 ore",
@@ -45,7 +45,7 @@ const questions = [
     },
 
     {
-        question: "Posso avere piu campi primary key in un tabella di un db ?",
+        question: "Posso avere piu campi primary key in un tabella di un db?",
         optionA: "No è uno ed è univoco",
         optionB: "Si ma almeno 5",
         optionC: "Massimo 2",
@@ -54,16 +54,16 @@ const questions = [
     },
 
     {
-        question: "Cosa riduce il filtro luce blu ?",
+        question: "Cosa riduce il filtro luce blu?",
         optionA: "Le luci blu della porta usb",
-        optionB: "la batteria del pc, nella sezione blu",
+        optionB: "La batteria del pc, nella sezione blu",
         optionC: "La luce blu dei pixel dello schermo",
-        optionD: "rimuove la retroilluminazione della tastiera",
+        optionD: "Rimuove la retroilluminazione della tastiera",
         correctOption: "optionC"
     },
 
     {
-        question: "int è una variabile di tipo ?",
+        question: "int è una variabile di tipo?",
         optionA: "Numerico intero",
         optionB: "Frazionale",
         optionC: "Numerico binario",
@@ -72,16 +72,16 @@ const questions = [
     },
 
     {
-        question: "Una variabile Float è una variabile ?",
+        question: "Una variabile Float è una variabile?",
         optionA: "Numerica volante chiamata anche temporanea",
         optionB: "Usa e getta",
-        optionC: "volante",
+        optionC: "Volante",
         optionD: "Numerica con la virgola",
         correctOption: "optionD"
     },
 
     {
-        question: `"Cosa significa in sql SELECT * FROM AUTO`,
+        question: "Cosa significa in sql SELECT * FROM AUTO?",
         optionA: "Seleziona le auto asterisco",
         optionB: "Seleziona la tabella auto dove la chiave primaria è 1",
         optionC: "Cambia targa dell'auto",
@@ -90,35 +90,35 @@ const questions = [
     },
 
     {
-        question: "Cosa succede se si preme in windows Alt+f4 ?",
+        question: "Cosa succede se si preme in windows Alt+f4?",
         optionA: "Apre un applicazione",
-        optionB: "avvia una chiamata sul C:",
+        optionB: "Avvia una chiamata sul C:",
         optionC: "Chiude l'applicazione in utilizzo",
         optionD: "Apre una nuova finestra",
         correctOption: "optionC"
     },
 
     {
-        question: "Quale delle seguenti istruzioni in sql seleziona campi dal db ?",
+        question: "Quale delle seguenti istruzioni in sql seleziona campi dal db?",
         optionA: "Select",
-        optionB: "update",
-        optionC: "get",
-        optionD: "extract",
+        optionB: "Update",
+        optionC: "Get",
+        optionD: "Extract",
         correctOption: "optionA"
     },
 
 
     {
         question: "In che linguaggio in scritto windows ?",
-        optionA: "java",
+        optionA: "Java",
         optionB: "C/C++/assembly",
-        optionC: "ruby",
-        optionD: "scratch",
+        optionC: "Ruby",
+        optionD: "Scratch",
         correctOption: "optionB"
     },
 
     {
-        question: "Qual'è la sintassi per mandare in output una stringa su java ?",
+        question: "Qual'è la sintassi per mandare in output una stringa su Java?",
         optionA: "Ex.line.out:hello",
         optionB: "system.deline.export.out<<=hello",
         optionC: "print('hello')",
@@ -127,11 +127,11 @@ const questions = [
     },
 
     {
-        question: "Chi creò microsoft ?",
-        optionA: "Bill gates",
-        optionB: "Mark zuckenberg",
+        question: "Chi creò Microsoft?",
+        optionA: "Bill Gates",
+        optionB: "Mark Zuckenberg",
         optionC: "X Æ A-12",
-        optionD: "Robert downey jr",
+        optionD: "Robert Downey Jr",
         correctOption: "optionA"
     },
 

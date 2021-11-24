@@ -9,6 +9,8 @@
     String USERNAME = "root";
     String PASSWORD = "";
     int idPos = Integer.parseInt(request.getParameter("scelta"));
+    int idCand = 0;
+    String Cf = session.getAttribute("Cf").toString();
     try {
         Class.forName(DRIVER);
         Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -22,7 +24,14 @@
         ResultSet rs = st.executeQuery(sel2);
         while(rs.next()){
             session.setAttribute("idCandidatura", rs.getInt("max"));
-        }        
+        }
+        idCand = (int) session.getAttribute("idCandidatura");     
+        String ins = ("INSERT INTO utente_candidatura(codFiscale, codCandidatura) VALUES(?, ?)");
+        PreparedStatement ps2 = con.prepareStatement(ins);
+        ps2.setString(1, Cf);
+        ps2.setInt(2, idCand);
+        ps2.executeUpdate();
+        ps2.close();    
         con.close();
     } catch (SQLException e) {
         e.getErrorCode();

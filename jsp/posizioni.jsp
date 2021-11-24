@@ -62,7 +62,7 @@
                 try {
                   Class.forName(DRIVER);
                   Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);   
-                  String sel = ("SELECT id, nome, stato FROM posizione WHERE stato = true");
+                  String sel = ("SELECT id, nome FROM posizione WHERE stato = true");
                   Statement st = con.createStatement();
                   ResultSet rs = st.executeQuery(sel);
                   while (rs.next()){
@@ -72,7 +72,7 @@
                   <td>
                     <%= rs.getString("nome") %>
                   </td>
-                  <td> <%= rs.getBoolean("stato") %> </td>
+                  <td> Libera </td>
                   <td>   
                     <input type="radio" name="scelta" value="<%= rs.getInt("id") %>">
                   </td>
@@ -91,7 +91,7 @@
             </tbody>
           </table>
           
-          <button type="button" class="btn btn-success">Invia candidatura</button>
+          <button class="btn btn-success">Invia candidatura</button>
         </form>
 
         <a href="user.jsp"> <button type="button" class="btn btn-dark m-3">Indietro</button></a>  

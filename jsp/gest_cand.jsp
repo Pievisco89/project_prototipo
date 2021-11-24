@@ -74,7 +74,7 @@
                     <td><%= rs.getInt("t1.codCandidatura") %></td>
                     <td><%= rs.getString("t1.codFiscale") %></td>
                     <td><%= rs.getInt("t3.punteggio") %></td>
-                    <td><button id="check" name="check" value="<%=rs.getInt("t1.codCandidatura")%>"><i class="fas fa-check"></i></button></td>
+                    <td><button id="check" name="check" value="<%=rs.getInt("t1.codCandidatura")%>" class="btn-primary" style="padding: 0 5px; border-radius: 5px;"><i class="fas fa-check"></i></button></td>
                   </tr>
               <%
                     }else{
@@ -83,7 +83,7 @@
                     <td><%= rs.getInt("t1.codCandidatura") %></td>
                     <td><%= rs.getString("t1.codFiscale") %></td>
                     <td><%= rs.getInt("t3.punteggio") %></td>
-                    <td><button id="check" name="check" value="<%=rs.getInt("t1.codCandidatura")%>"><i class="fas fa-check"></i></button></td>
+                    <td><button id="check" name="check" value="<%=rs.getInt("t1.codCandidatura")%>" class="btn-primary" style="padding: 0 5px; border-radius: 5px;"><i class="fas fa-check"></i></button></td>
                   </tr>
               <% 
                     }

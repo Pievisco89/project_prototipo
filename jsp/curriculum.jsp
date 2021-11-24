@@ -1,9 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
-<%-- <%
-    if(session.getAttribute("Utente")!=null){
-    if(session.getAttribute("Utente").equals("TRUE")){
-%> --%>
+<%
+    if(session.getAttribute("Utente")!=null && session.getAttribute("Utente").equals(true) && session.getAttribute("Tipo").equals("user")){
+%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,6 +57,7 @@
                 String URL="jdbc:mysql://localhost:3306/project_work";
                 String USERNAME="root";
                 String PASSWORD="";
+                int k=0;
                 try{
                     Class.forName(DRIVER);
                     Connection con=DriverManager.getConnection(URL,USERNAME,PASSWORD);
@@ -65,9 +65,11 @@
                     Statement st = con.createStatement();
                     ResultSet rs= st.executeQuery(sel);
                     while(rs.next()){
-                        out.println("<input id='speciale' type='checkbox' value='" + rs.getInt("idSkill") + "' required>");
-                        out.println("<label>" + rs.getString("nomeSkill") + "</label>");
+                      out.println("<input class='speciale' name='speciale' type='checkbox' value='" + rs.getInt("idSkill") + "'>");
+                      out.println("<label>" + rs.getString("nomeSkill") + "</label>");
+                      k++;
                     }
+                    session.setAttribute("lunghezza", k);
                         con.close();
                     } catch (SQLException e) {
                         e.getErrorCode();
@@ -76,7 +78,7 @@
                 %> 
           </div>
           <div> 
-            <button type="button" class="btn btn-success">Invia curriculum e skills</button>        
+            <button class="btn btn-success" onclick="Controllo()">Invia curriculum e skills</button>        
           </div>
         </form>
         
@@ -85,6 +87,16 @@
       </section>
       
 	    <script src="../js/script.js"></script>
+      <script src="../js/gestioneBottone.js"></script>
     </body>
 
 </html>
+<%
+      }else{
+%>
+  <script>
+    window.location.href = '../login_user.html';
+  </script> 
+<%
+      }
+%>

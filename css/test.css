@@ -94,6 +94,7 @@ span label{
     transition: transform 0.3s;
     font-weight: 600;
     color: rgb(22, 22, 22);
+    padding: 2%;
 }
 
 span label:hover{
