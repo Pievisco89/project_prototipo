@@ -66,7 +66,7 @@
               try {
                 Class.forName(DRIVER);
                 Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);   
-                String sel = ("SELECT t1.codCandidatura, t1.codFiscale, t2.stato_domanda, t3.punteggio, t4.nome FROM utente_candidatura t1 INNER JOIN candidatura t2 ON t1.codCandidatura = t2.idCandidatura INNER JOIN test t3 ON t2.cod_posizione = t3.idTest INNER JOIN posizione t4 ON t2.cod_posizione=t4.id WHERE t1.codFiscale = '"+ cod_fisc +"';");
+                String sel = ("SELECT t1.codCandidatura, t1.codFiscale, t2.stato_domanda, t3.punteggio, t4.nome FROM utente_candidatura t1 INNER JOIN candidatura t2 ON t1.codCandidatura = t2.idCandidatura INNER JOIN test t3 ON t2.codTest = t3.idTest INNER JOIN posizione t4 ON t2.cod_posizione=t4.id WHERE t1.codFiscale = '"+ cod_fisc +"';");
                 Statement st = con.createStatement();
                 ResultSet rs = st.executeQuery(sel);
                 while (rs.next()){
