@@ -117,7 +117,7 @@
             </select>
           </div>
           <div class="container pos text-center">  
-            <button type="button" class="btn btn-success" style="padding: 5px 15px;"><i class="fas fa-plus"></i></button>
+            <button class="btn btn-success" style="padding: 5px 15px;"><i class="fas fa-plus"></i></button>
           </div> 
         </form>
 
